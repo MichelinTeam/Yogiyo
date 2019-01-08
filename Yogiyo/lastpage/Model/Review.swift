@@ -98,16 +98,17 @@ struct MenuSummary: Codable {
 
 struct User: Codable {
     let id: Int
-    let username, password, email, phoneNumber: String
+    let username, email, phoneNumber: String
     let nickName: String
     
     enum CodingKeys: String, CodingKey {
-        case id, username, password, email
+        case id, username, email
         case phoneNumber = "phone_number"
         case nickName = "nick_name"
     }
 }
 
 // MARK: Encode/decode helpers
+
 
 
